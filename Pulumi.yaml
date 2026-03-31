@@ -1,0 +1,16 @@
+name: bt-pulumi-bridge
+description: Basis Theory resources via Pulumi Terraform Bridge
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript
+packages:
+  basistheory:
+    source: pulumi/pulumi/terraform-provider
+    version: 1.1.1
+    parameters:
+      - Basis-Theory/basistheory
